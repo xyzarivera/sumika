@@ -20,5 +20,11 @@ export default tseslint.config(
       'svelte/no-unused-svelte-ignore': 'off'
     }
   },
-  eslintConfigPrettier
+  {
+    ...eslintConfigPrettier,
+    rules: {
+      ...eslintConfigPrettier.rules,
+      'prettier/prettier': 'error'
+    }
+  }
 )
