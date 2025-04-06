@@ -9,4 +9,5 @@ xset s noblank
 unclutter -idle 0.5 &
 
 # Start your Electron app
-npm run start:x11 --prefix "$(dirname "$(dirname $0)")"
+# TODO: Make path dynamic
+npm run start:x11 --prefix /home/sumika/sumika
