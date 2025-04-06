@@ -15,6 +15,10 @@ function createWindow(): void {
       preload: join(__dirname, "../preload/index.js"),
       sandbox: false,
     },
+    kiosk: true,
+    frame: false,
+    fullscreen: true,
+    alwaysOnTop: true,
   });
 
   mainWindow.on("ready-to-show", () => {
