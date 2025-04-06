@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Disable screen blanking
+xset s off
+xset -dpms
+xset s noblank
+
+# Optional: hide mouse cursor
+unclutter -idle 0.5 &
+
+# Start your Electron app
+npm run start:x11 --prefix "$(dirname "$(dirname $0)")"
