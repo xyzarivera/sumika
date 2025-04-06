@@ -5,8 +5,6 @@ if [ $(id -u) -ne 0 ]; then
   exit 1
 fi
 
-
-
 # Setup autologin, TODO: maybe make username dynamic?
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
 
@@ -23,7 +21,19 @@ apt-get update && apt install --no-install-recommends \
   xserver-xorg \
   x11-xserver-utils \
   xinit \
-  unclutter
+  unclutter \
+  libgtk-3-0 \
+  libnss3 \
+  libxss1 \
+  libasound2 \
+  libatk1.0-0 \
+  libatk-bridge2.0-0 \
+  libcups2 \
+  libxcomposite1 \
+  libxrandr2 \
+  libxdamage1 \
+  libxkbcommon0 \
+  libgbm1
 
 # Setup x11
 ln -s "$(realpath ./rpi/xinitrc)" $HOME/.xinitrc
