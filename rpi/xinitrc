@@ -8,6 +8,9 @@ xset s noblank
 # Optional: hide mouse cursor
 unclutter -idle 0.5 &
 
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Start your Electron app
 # TODO: Make path dynamic
 npm run start:x11 --prefix /home/sumika/sumika
