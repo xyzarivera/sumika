@@ -1,5 +1,7 @@
 # sumika
 
+スミカ (住処) -- Home Dashboard App
+
 An Electron application with Svelte and TypeScript
 
 ## Recommended IDE Setup
