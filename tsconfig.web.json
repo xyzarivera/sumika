@@ -7,11 +7,15 @@
     "src/preload/*.d.ts"
   ],
   "compilerOptions": {
+    "baseUrl": ".",
     "verbatimModuleSyntax": true,
     "useDefineForClassFields": true,
     "strict": false,
     "allowJs": true,
     "checkJs": true,
-    "lib": ["ESNext", "DOM", "DOM.Iterable"]
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "paths": {
+      "@/*": ["src/renderer/src/*"]
+    }
   }
 }
