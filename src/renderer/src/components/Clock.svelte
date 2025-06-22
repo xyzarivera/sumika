@@ -15,8 +15,8 @@
   });
 </script>
 
-<section>
+<section class="text-center">
   <h1 hidden>datetime today</h1>
-  <p>{current_time}</p>
-  <p>{current_date}</p>
+  <p class="text-[120px] font-bold">{current_time}</p>
+  <p class="text-2xl font-semibold">{current_date}</p>
 </section>
