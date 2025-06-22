@@ -21,6 +21,6 @@
 
 <section class="text-center">
   <h1 hidden>datetime today</h1>
-  <p class="text-[120px] font-bold">{displayedTime}</p>
+  <p class="text-8xl font-bold">{displayedTime}</p>
   <p class="text-2xl font-semibold">{displayedDate}</p>
 </section>
