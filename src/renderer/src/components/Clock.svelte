@@ -10,12 +10,12 @@
   let displayedTime = $derived(dayjs(currentDateTime).format(TIME_FORMAT));
   let displayedDate = $derived(dayjs(currentDateTime).format(DATE_FORMAT));
 
-  onMount((): (() => void) => {
+  onMount(() => {
     const interval = setInterval(() => {
       currentDateTime = new Date();
     }, 1000);
 
-    return () => clearInterval(interval);
+    return (): void => clearInterval(interval);
   });
 </script>
 
