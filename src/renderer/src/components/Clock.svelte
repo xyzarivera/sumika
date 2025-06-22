@@ -2,13 +2,17 @@
   import dayjs from "dayjs";
   import { onMount } from "svelte";
 
-  let current_time = dayjs().format("hh:mm A");
-  let current_date = dayjs().format("MMM DD YYYY, ddd");
+  const TIME_FORMAT = "hh:mm A";
+  const DATE_FORMAT = "MMM DD YYYY, ddd";
+
+  let currentDateTime = $state(new Date());
+
+  let displayedTime = $derived(dayjs(currentDateTime).format(TIME_FORMAT));
+  let displayedDate = $derived(dayjs(currentDateTime).format(DATE_FORMAT));
 
   onMount((): (() => void) => {
     const interval = setInterval(() => {
-      current_time = dayjs().format("hh:mm A");
-      current_date = dayjs().format("MMM DD YYYY, ddd");
+      currentDateTime = new Date();
     }, 1000);
 
     return () => clearInterval(interval);
@@ -17,6 +21,6 @@
 
 <section class="text-center">
   <h1 hidden>datetime today</h1>
-  <p class="text-[120px] font-bold">{current_time}</p>
-  <p class="text-2xl font-semibold">{current_date}</p>
+  <p class="text-[120px] font-bold">{displayedTime}</p>
+  <p class="text-2xl font-semibold">{displayedDate}</p>
 </section>
